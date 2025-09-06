@@ -1,4 +1,4 @@
-#include "p1.cpp"
+#include "p1.h"
 
 using namespace std;
 
@@ -40,7 +40,7 @@ int main(){
                 option = -1;
                 break;
             case 2:
-                
+
 
                 option = -1;
                 break;
