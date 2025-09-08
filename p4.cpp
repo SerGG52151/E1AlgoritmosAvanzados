@@ -83,6 +83,7 @@ std::string leerArchivo(const std::string& nombreArchivo) {
     return contenido;
 }
 
+//Funcion principal para analisis
 void analizarConHuffman(const std::string& nombreTransmision, const std::vector<std::string>& archivosMcode) {
     std::string textoTransmision = leerArchivo(nombreTransmision);
 
@@ -107,7 +108,7 @@ void analizarConHuffman(const std::string& nombreTransmision, const std::vector<
         // Checar si es sospechoso
         bool sospechoso = promedioMcode > promedioEsperado * 1.5;
 
-        std::cout << archivoMcode << (sospechoso ? "sospechoso" : "no-sospechoso") << " " << longitudMcodeCodificada << std::endl;
+        std::cout << archivoMcode << ": " << (sospechoso ? "sospechoso" : "no-sospechoso") << " " << longitudMcodeCodificada << std::endl;
     }
 
     std::cout << std::endl;

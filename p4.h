@@ -1,4 +1,3 @@
-// Huffman.h
 #ifndef P4_H
 #define P4_H
 
