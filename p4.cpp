@@ -1,4 +1,4 @@
-#include "Huffman.h"
+#include "p4.h"
 
 Nodo::Nodo(char c, int f) : caracter(c), frecuencia(f), izquierda(nullptr), derecha(nullptr) {}
 Nodo::Nodo(Nodo* l, Nodo* r) : caracter('\0'), frecuencia(l->frecuencia + r->frecuencia), izquierda(l), derecha(r) {}

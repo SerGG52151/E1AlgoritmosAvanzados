@@ -1,4 +1,5 @@
 #include "p1.h"
+#include "p4.h"
 
 using namespace std;
 
@@ -48,6 +49,9 @@ int main(){
                 option = -1;
                 break;
             case 4:
+                for (const string& transmission : transmissions) {
+                    analizarConHuffman(transmission, mcodes);
+                }
                 option = -1;
                 break;
             default:
