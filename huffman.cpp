@@ -25,7 +25,7 @@ Nodo* construirArbolHuffman(const std::string& texto) {
         pq.push(new Nodo(izquierda, derecha));
     }
 
-    return pq.top();  // Raíz del árbol
+    return pq.top();
 }
 
 void generarCodigos(Nodo* nodo, const std::string& codigo, std::unordered_map<char, std::string>& codigos) {
