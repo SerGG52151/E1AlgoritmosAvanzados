@@ -52,7 +52,7 @@ int main(){
 
                 string posiciones_palindromo = manacher(texto);
 
-                cout << "Las posiciones del palindromo mas largo: " << posiciones_palindromo << endl;
+                cout << "Las posiciones del palindromo mas largo: " << posiciones_palindromo << endl << endl;
 
 
                 option = -1;
