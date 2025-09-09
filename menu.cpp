@@ -1,4 +1,5 @@
 #include "p1.h"
+#include "p2.h"
 #include "p4.h"
 
 using namespace std;
@@ -16,13 +17,13 @@ int main(){
         << "1. Subsequence Search\n"
         << "2. Palindrome Search\n"
         << "3. Longest Common Substring\n"
-        << "4. Huffman Coding\n" 
+        << "4. Huffman Coding\n"
         << endl;
 
         pair<bool, int> ans;
 
         cin >> option;
-        
+
         switch(option){
             case 0:
                 option = 0;
@@ -41,6 +42,17 @@ int main(){
                 option = -1;
                 break;
             case 2:
+            for (int i = 0; i < transmissions.size(); i++) {
+                string filename = transmissions[i];
+                string texto = getString(transmissions[i]);
+
+
+                cout << "Analizando archivo: " << filename << endl;
+
+
+                string posiciones_palindromo = manacher(texto);
+
+                cout << "Las posiciones del palindromo mas largo: " << posiciones_palindromo << endl;
 
 
                 option = -1;
