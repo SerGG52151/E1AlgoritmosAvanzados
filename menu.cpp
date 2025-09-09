@@ -20,7 +20,7 @@ int main(){
         << "4. Huffman Coding\n"
         << endl;
 
-        pair<bool, int> ans;
+        
 
         cin >> option;
 
@@ -28,9 +28,10 @@ int main(){
             case 0:
                 option = 0;
                 break;
-            case 1:
+            case 1: {
                 for(auto transmission : transmissions){
                     for(auto mcode : mcodes){
+                        pair<bool, int> ans;
                         ans = findSubseq(transmission, mcode);
                         string out;
                         if(ans.first) out = "true<" + to_string(ans.second) + ">";
@@ -41,26 +42,28 @@ int main(){
 
                 option = -1;
                 break;
-            case 2:
-            for (int i = 0; i < transmissions.size(); i++) {
-                string filename = transmissions[i];
-                string texto = getString(transmissions[i]);
+            }
+            case 2: {
+                for (int i = 0; i < transmissions.size(); i++) {
+                    string filename = transmissions[i];
+                    string texto = getString(transmissions[i]);
 
 
-                cout << "Analizando archivo: " << filename << endl;
+                    cout << "Analizando archivo: " << filename << endl;
 
 
-                string posiciones_palindromo = manacher(texto);
+                    string posiciones_palindromo = manacher(texto);
 
-                cout << "Las posiciones del palindromo mas largo: " << posiciones_palindromo << endl << endl;
-
-
+                    cout << "Las posiciones del palindromo mas largo: " << posiciones_palindromo << endl << endl;
+                }
                 option = -1;
                 break;
-            case 3:
+            }
+            case 3: {
                 option = -1;
                 break;
-            case 4:
+            }
+            case 4: {
                 for (const string& transmission : transmissions) {
                     analizarConHuffman(transmission, mcodes);
                 }
@@ -69,6 +72,7 @@ int main(){
             default:
                 cout << "Choose valid option\n";
                 option = -1;
+            }
         }
     }
 
