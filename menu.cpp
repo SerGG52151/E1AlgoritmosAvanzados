@@ -58,12 +58,16 @@ int main() {
 
             case 3: {
              
-             string T1 = readFileNoNewlines("transmission1.txt");
-             string T2 = readFileNoNewlines("transmission2.txt");
-             auto [s, e] =longestCommonSubstringPositions1BasedInclusive1(T1, T2);
-             cout << s << " " << e << endl;
-             option = -1;
-             break;
+                 ios::sync_with_stdio(false);
+                 cin.tie(nullptr);
+
+                 string t1 = getString("transmission1.txt");
+                 string t2 = getString("transmission2.txt");
+
+                 auto ans = longestCommonSubstringPositions1BasedInclusive(t1, t2);
+                 cout << ans.first << " " << ans.second << "\n";
+                 option = -1;
+                 break;
                     }
 
             case 4: {
