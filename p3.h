@@ -109,15 +109,4 @@ pair<int,int> longestCommonSubstringPositions1BasedInclusive(const string &s1, c
     return {start1, end1};
 }
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
 
-    string t1 = getString("transmission1.txt");
-    string t2 = getString("transmission2.txt");
-
-    auto ans = longestCommonSubstringPositions1BasedInclusive(t1, t2);
-    cout << ans.first << " " << ans.second << "\n";
-
-    return 0;
-}
