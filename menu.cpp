@@ -2,7 +2,7 @@
 #include "p2.h"   
 #include "p3.h" 
 #include "p4.h"   
-
+#include "readFiles.h"
 using namespace std;
 
 int main() {
@@ -60,7 +60,7 @@ int main() {
              
              string T1 = readFileNoNewlines("transmission1.txt");
              string T2 = readFileNoNewlines("transmission2.txt");
-             auto [s, e] =longestCommonSubstringPositions1BasedInclusive1(T1, T2);
+             auto [s, e] =longestCommonSubstringPositions1BasedInclusive(T1, T2);
              cout << s << " " << e << endl;
              option = -1;
              break;
