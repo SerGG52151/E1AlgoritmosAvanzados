@@ -58,15 +58,13 @@ int main() {
 
             case 3: {
              
-                string t1 = getString(transmissions[0]);
-                string t2 = getString(transmissions[1]);
-                auto [i1, j1, sub] = lcs_positions_and_text(t1, t2);
-                cout << i1 << " " << j1 << endl;
-                cout << "Substring comun mas largo: " << sub << endl;
-
-                option = -1;
-                break;
-            }
+             string T1 = readFileNoNewlines("transmission1.txt");
+             string T2 = readFileNoNewlines("transmission2.txt");
+             auto [s, e] = longestCommonSubstringPosInS1(T1, T2);
+             cout << s << " " << e << endl;
+             option = -1;
+             break;
+                    }
 
             case 4: {
                 for (const string& transmission : transmissions) {
