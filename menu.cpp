@@ -60,7 +60,7 @@ int main() {
              
              string T1 = readFileNoNewlines("transmission1.txt");
              string T2 = readFileNoNewlines("transmission2.txt");
-             auto [s, e] = longestCommonSubstringPosInS1(T1, T2);
+             auto [s, e] =longestCommonSubstringPositions1BasedInclusive1(T1, T2);
              cout << s << " " << e << endl;
              option = -1;
              break;
